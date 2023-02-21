@@ -50,14 +50,13 @@ RUN touch /var/log/nginx/access.log
 RUN touch /var/log/nginx/php-error.log
 RUN touch /var/log/nginx/php-access.log
 RUN touch /var/log/nginx/worker.log
-RUN touch /var/www/html/storage/log/laravel.log
+RUN touch /var/www/html/storage/logs/laravel.log
 
 RUN chown -R laravel:laravel /var/log
 RUN chown -R laravel:laravel /var/lib/nginx/logs
 RUN chown -R laravel:laravel /var/www/html/storage
 RUN chmod g+s /var/www/html/storage/logs
 RUN touch /var/www/html/storage/logs/init.log
-VOLUME ["/var/www/html/storage/logs"]
 
 FROM node:16.0-alpine AS node
 
