@@ -5,7 +5,7 @@ networks:
 
 services:
   site:
-    image: 800797377039.dkr.ecr.us-east-2.amazonaws.com/claritycore:test
+    image: public.ecr.aws/d7a3o6p2/devskillstest:candidate
     container_name: LaravelSandbox
     volumes:
       - ./app:/var/www/html/app
