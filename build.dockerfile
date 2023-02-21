@@ -50,6 +50,7 @@ RUN touch /var/log/nginx/access.log
 RUN touch /var/log/nginx/php-error.log
 RUN touch /var/log/nginx/php-access.log
 RUN touch /var/log/nginx/worker.log
+RUN touch /var/www/html/storage/log/laravel.log
 
 RUN chown -R laravel:laravel /var/log
 RUN chown -R laravel:laravel /var/lib/nginx/logs
