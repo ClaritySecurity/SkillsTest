@@ -5,10 +5,11 @@ networks:
 
 services:
   site:
+    image: public.ecr.aws/d7a3o6p2/devskillstest:candidate
     build:
       context: .
       dockerfile: build.dockerfile
-    container_name: LaravelSandbox
+    container_name: devskillstest
     volumes:
       - ./SkillsTest:/var/www/html
     networks:

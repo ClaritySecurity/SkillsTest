@@ -69,7 +69,6 @@ COPY --from=node /usr/local/include /usr/local/include
 COPY --from=node /usr/local/bin /usr/local/bin
 
 RUN npm install
-RUN npm run dev
 
 EXPOSE 80
 EXPOSE 443
