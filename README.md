@@ -10,6 +10,8 @@ If you run your test and it fails the first time, that's also not a mark against
 then re-run the test as many times as you like. The end-result, and how quickly you arrive at an acceptable solution
 are the main criteria we evaluate on.
 
+Start by cloning this repo to your local environment and then complete each of the objectives below.
+
 Objectives:
 1. Set up the skills testing environment using the docker-compose file provided.
 2. Using the documentation provided in SWAPI, find the data you expect to be returned from the 'starships' endpoint.
