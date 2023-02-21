@@ -5,12 +5,13 @@ networks:
 
 services:
   site:
-    build:
-      context: .
-      dockerfile: build.dockerfile
+    image: 800797377039.dkr.ecr.us-east-2.amazonaws.com/claritycore:test
     container_name: LaravelSandbox
     volumes:
-      - ./SkillsTest:/var/www/html
+      - ./app:/var/www/html/app
+      - ./resources:/var/www/html/resources
+      - ./routes:/var/www/html/routes
+      - ./tests:/var/www/html/tests
     networks:
       - laravel
     ports:
