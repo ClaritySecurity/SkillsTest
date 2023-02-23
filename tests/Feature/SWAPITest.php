@@ -14,7 +14,8 @@ class SWAPITest extends TestCase
      */
     public function test_the_starship_table_exists(): void
     {
-        $this->assertDatabaseHas('st_starship');
+        $hasTable = Schema::hasTable('st_starship');
+        $this->assertTrue($hasTable);
     }
 
     public function test_the_starship_table_has_fields(): void
