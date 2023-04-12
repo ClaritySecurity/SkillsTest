@@ -22,7 +22,7 @@ services:
       - mysql
   mysql:
     image: mysql:8.0
-    container_name: mysql
+    container_name: mysqlskillstest
     restart: unless-stopped
     tty: true
     ports:
