@@ -21,6 +21,7 @@ services:
     depends_on:
       - mysql
   mysql:
+    #image: mariadb:10.4
     image: mysql:8.0
     container_name: mysqlskillstest
     restart: unless-stopped
@@ -28,7 +29,7 @@ services:
     ports:
       - 3306:3306
     volumes:
-      - ./mysql:/var/lib/mysql
+      - ./mysql:/var/lib/mysql --no-dereference
     environment:
       MYSQL_DATABASE: sandbox
       MYSQL_USER: admin
