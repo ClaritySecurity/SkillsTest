@@ -20,14 +20,15 @@ Initial Setup
 3. Checkout branch `git checkout front-end-vue-2` or `git checkout 
    front-end-vue-3`
 3. modify docker-compose.yml to ensure correct database image for your processor architecture
-4. run `docker-compose up -d` or maybe have to do `docker-compose up -d --build`?
+4. run `docker-compose up -d`
 5. Open terminal from docker desktop 'devskillstest' container to run the 
    following commands from inside the container
-5. run `php artisan composer install`
-6. run `php artisan npm install`
+5. run `composer install`
+6. run `npm install`
 7. run `php artisan migrate`
 8. run `npm run dev` 
-9. visit http://localhost/index to confirm that the app is running, and 
+9. visit http://localhost/index to confirm that the app is running. Get the 
+   API key from Mike or Greg and update the RealtyInUsAPI.php file and then 
    click "Import Properties" to seed the database with some data.
 
 Objective
