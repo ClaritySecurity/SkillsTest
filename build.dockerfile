@@ -37,8 +37,8 @@ RUN docker-php-ext-configure pcntl --enable-pcntl \
 CMD ["php-fpm", "-y", "/usr/local/etc/php-fpm.conf", "-R"]
 
 COPY --from=composer /usr/bin/composer /usr/bin/composer
-RUN /usr/bin/composer update
-RUN /usr/bin/composer install --optimize-autoloader
+#RUN /usr/bin/composer update
+#RUN /usr/bin/composer install --optimize-autoloader
 
 RUN mkdir -p /var/docker
 COPY --chown=laravel:laravel site/init.sh /var/docker
@@ -68,7 +68,7 @@ COPY --from=node /usr/local/lib /usr/local/lib
 COPY --from=node /usr/local/include /usr/local/include
 COPY --from=node /usr/local/bin /usr/local/bin
 
-RUN npm install
+#RUN npm install
 
 EXPOSE 80
 EXPOSE 443

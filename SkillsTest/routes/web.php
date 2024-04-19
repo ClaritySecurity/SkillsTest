@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PropertyListingController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/listings', [PropertyListingController::class, 'listings']);
+Route::get('/import-listings', [PropertyListingController::class, 'importListings']);
+Route::get('/index', [PropertyListingController::class, 'index']);
