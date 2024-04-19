@@ -1,5 +1,6 @@
 @extends('layouts.app')
 @section('content')
+    <!--listings></listings-->
     <h1 class="fw-normal m-4">Real Estate Listings</h1>
     @foreach($listings as $listing)
         <div class="card m-4" style="width: 36rem;">
