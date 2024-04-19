@@ -10,7 +10,7 @@ class PropertyListingController extends Controller
 {
     public function listings()
     {
-        $listings = PropertyListing::limit(10)->get();
+        $listings = PropertyListing::limit(5)->get();
 
         return view('listings', compact('listings'));
     }

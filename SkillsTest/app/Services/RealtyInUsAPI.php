@@ -16,9 +16,9 @@ class RealtyInUsAPI
             'X-RapidAPI-Key' => '2a2d93f173msh14ef235fe751cb4p1ee8abjsnd15df3d91306',
             'content-type' => 'application/json',
             ])->post('https://realty-in-us.p.rapidapi.com/properties/v3/list', [
-            'limit' => 200,
+            'limit' => 10,
             'offset' => 0,
-            'postal_code' => '84065',
+            'postal_code' => '90210',
             'status' => [
                 'for_sale',
                 'ready_to_build'
