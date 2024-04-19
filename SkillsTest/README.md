@@ -22,8 +22,8 @@ Initial Setup
 3. modify docker-compose.yml to ensure correct database image for your processor architecture
 4. run `docker-compose up -d` or maybe have to do `docker-compose up -d --build`?
 5. Open terminal from docker desktop 'devskillstest' container
-5. run `php artisan composer install`
-6. run `php artisan npm install`
+5. run `composer install`
+6. run `npm install`
 7. run `php artisan migrate`
 8. run `npm run build` and then move the public/build/.vite/manifest.json to
    public/build/manifest.json (Mike is dumb and upgraded Vite and broke it)
