@@ -12,7 +12,7 @@ class RealtyInUsAPI
     {
         $response = Http::withHeaders([
             'X-RapidAPI-Host' => 'realty-in-us.p.rapidapi.com',
-            'X-RapidAPI-Key' => '2a2d93f173msh14ef235fe751cb4p1ee8abjsnd15df3d91306',
+            'X-RapidAPI-Key' => 'GET KEY FROM MIKE',
             'content-type' => 'application/json',
             ])->post('https://realty-in-us.p.rapidapi.com/properties/v3/list', [
             'limit' => 5,
