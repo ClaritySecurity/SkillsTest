@@ -19,5 +19,3 @@ Route::get('/', function () {
 });
 
 Route::get('/listings', [PropertyListingController::class, 'listings']);
-Route::get('/import-listings', [PropertyListingController::class, 'importListings']);
-Route::get('/index', [PropertyListingController::class, 'index']);
