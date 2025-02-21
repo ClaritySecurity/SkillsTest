@@ -58,7 +58,7 @@ RUN chown -R laravel:laravel /var/www/html/storage
 RUN chmod g+s /var/www/html/storage/logs
 RUN touch /var/www/html/storage/logs/init.log
 
-FROM node:16.0-alpine AS node
+FROM node:18.0-alpine AS node
 
 FROM php
 

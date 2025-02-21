@@ -20,7 +20,7 @@ services:
     depends_on:
       - mysql
   mysql:
-    image: mariadb:10.6
+    image: arm64v8/mysql:8.0.29
     container_name: mysql
     restart: unless-stopped
     tty: true
