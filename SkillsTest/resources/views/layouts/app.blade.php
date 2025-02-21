@@ -6,9 +6,10 @@
     </head>
 
     <body>
-        <div id="app"></div>
+        <div id="app">
         @vite('resources/js/app.js')
 
         @yield('content')
+        </div>
     </body>
 </html>

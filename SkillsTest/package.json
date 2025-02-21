@@ -2,7 +2,8 @@
     "private": true,
     "scripts": {
         "dev": "vite",
-        "build": "vite build"
+        "build": "vite build",
+        "postbuild": "cp public/build/.vite/manifest.json public/build/manifest.json"
     },
     "devDependencies": {
         "@vitejs/plugin-vue": "^5.0.4",

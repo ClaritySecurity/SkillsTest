@@ -24,8 +24,10 @@ class PropertyListingController extends Controller
 
     public function index()
     {
-        $propertyListings = PropertyListing::all();
+        //$propertyListings = PropertyListing::all();
 
-        return view('index', compact('propertyListings'));
+        //return view('index', compact('propertyListings'));
+
+        return view('index');
     }
 }

@@ -1,9 +1,12 @@
 import './bootstrap';
 
-import { createApp } from '../../node_modules/vue/dist/vue.esm.browser.js';
-import App from './App.vue';
+import { createApp } from '../../node_modules/vue/dist/vue.esm-bundler';
+import SearchProperties from "./components/SearchProperties.vue";
 
-const app = createApp(App);
-// apply any configurations here
+const app = createApp({
+    components: {
+        SearchProperties,
+    },
+});
 
 app.mount('#app');
