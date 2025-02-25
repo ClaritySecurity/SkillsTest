@@ -2,17 +2,14 @@ Welcome to the Clarity Skills Test Sandbox
 
 Initial Setup
 1. Clone repo `git clone https://github.com/ClaritySecurity/SkillsTest.git`
-2. Checkout branch `git checkout backend-senior`
-3. modify docker-compose.yml to ensure correct database image for your 
+2. `cd SkillsTest`
+3. Checkout branch `git checkout backend-senior`
+4. modify docker-compose.yml to ensure correct database image for your 
    processor architecture
-4. run `docker-compose up -d` or maybe have to do `docker-compose up -d 
---build`?
-5. Open terminal from docker desktop 'devskillstest' container
-6. run `composer install`
-7. run `npm install`
-8. run `php artisan migrate`
-9. run `npm run build`
-10. visit http://localhost/index to confirm that the app is running.
+5. run `docker-compose up -d`
+6. Open terminal from docker desktop 'devskillstest' container
+7. run `composer install && npm install && php artisan migrate && npm run build`
+8. visit http://localhost/index to confirm that the app is running.
 
 API documentation: 
 https://rapidapi.com/apidojo/api/realty-in-us/playground/apiendpoint_c4d477ea-7292-48fa-9dfe-f093f2adf8ac

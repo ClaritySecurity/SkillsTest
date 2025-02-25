@@ -2,7 +2,7 @@
 @section('content')
     <h1 class="fw-normal">Welcome!</h1>
 
-    <h4>Before you can import properties, follow the steps in the requirements document</h4>
+    <h4>Before importing properties, add the API Key to Services/RealityInUsAPI.php</h4>
 
     <a class="btn btn-success" href="{{ url('import-listings') }}">Import Properties</a>
 

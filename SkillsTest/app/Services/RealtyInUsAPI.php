@@ -2,7 +2,6 @@
 
 namespace App\Services;
 
-use App\Models\PropertyListing;
 use Illuminate\Support\Facades\Http;
 
 class RealtyInUsAPI
@@ -15,7 +14,7 @@ class RealtyInUsAPI
             'X-RapidAPI-Key' => 'GET KEY FROM MIKE',
             'content-type' => 'application/json',
             ])->post('https://realty-in-us.p.rapidapi.com/properties/v3/list', [
-            'limit' => 200,
+            'limit' => 5,
             'offset' => 0,
             'postal_code' => '90210',
             'status' => [

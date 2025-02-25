@@ -14,8 +14,7 @@ use App\Http\Controllers\PropertyListingController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
-Route::get('/listings', [PropertyListingController::class, 'listings']);
+Route::get('/', [PropertyListingController::class, 'index']);
+Route::get('/index', [PropertyListingController::class, 'index']);
+Route::get('/import-listings', [PropertyListingController::class, 'importListings']);
