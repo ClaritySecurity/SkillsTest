@@ -8,11 +8,8 @@ Initial Setup
    processor architecture
 5. run `docker-compose up -d`
 6. Open terminal from docker desktop 'devskillstest' container
-7. run `composer install`
-8. run `npm install`
-9. run `php artisan migrate`
-10. run `npm run build`
-11. visit http://localhost/index to confirm that the app is running.
+7. run `composer install && npm install && php artisan migrate && npm run build`
+8. visit http://localhost/index to confirm that the app is running.
 
 Your task is to complete the Vue component `SearchProperties.vue`
 
