@@ -3,7 +3,7 @@ Welcome to the Clarity Skills Test Sandbox
 Initial Setup
 1. Clone repo `git clone https://github.com/ClaritySecurity/SkillsTest.git`
 2. `cd SkillsTest`
-3. Checkout branch `git checkout backend-senior`
+3. Checkout branch `git checkout fullstack-senior`
 4. modify docker-compose.yml to ensure correct database image for your 
    processor architecture
 5. run `docker-compose up -d`
