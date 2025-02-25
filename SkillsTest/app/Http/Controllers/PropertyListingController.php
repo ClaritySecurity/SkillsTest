@@ -17,4 +17,11 @@ class PropertyListingController extends Controller
 
         return response()->json($listings);
     }
+
+    public function listings()
+    {
+        // This is where we would normally query the database for listings
+
+        return view('listings');
+    }
 }

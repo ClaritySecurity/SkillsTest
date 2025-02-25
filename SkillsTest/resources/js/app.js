@@ -1,11 +1,11 @@
 import './bootstrap';
 
 import { createApp } from '../../node_modules/vue/dist/vue.esm-bundler';
-import SearchProperties from "./components/SearchProperties.vue";
+import ListProperties from "./components/ListProperties.vue";
 
 const app = createApp({
     components: {
-        SearchProperties,
+        ListProperties,
     },
 });
 

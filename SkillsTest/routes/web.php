@@ -18,3 +18,4 @@ use App\Http\Controllers\PropertyListingController;
 Route::get('/', [PropertyListingController::class, 'index']);
 Route::get('/index', [PropertyListingController::class, 'index']);
 Route::get('/import-listings', [PropertyListingController::class, 'importListings']);
+Route::get('/listings', [PropertyListingController::class, 'listings']);
