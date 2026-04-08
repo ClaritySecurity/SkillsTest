@@ -54,7 +54,7 @@ and extend the test suite to cover your changes.
 5. **Vue Component** -- Wire up the scaffolded Vue component to hit your API endpoint and render the breweries.
 
 6. **Tests** -- Update the test suite to cover the persistence layer you built. 
-7. 
+
 7. **Verify** -- Run the test suite:
    ```
    php artisan test
