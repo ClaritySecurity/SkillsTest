@@ -5,7 +5,6 @@ networks:
 
 services:
   site:
-    image: public.ecr.aws/d7a3o6p2/devskillstest:candidate
     build:
       context: .
       dockerfile: build.dockerfile
@@ -17,10 +16,13 @@ services:
     ports:
       - 80:80
       - 443:443
+      - 5173:5173
+    environment:
+      ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY:-}
     depends_on:
       - mysql
   mysql:
-    image: mysql:5.7.12
+    image: mysql:8.0
     container_name: mysql
     restart: unless-stopped
     tty: true
@@ -33,9 +35,5 @@ services:
       MYSQL_USER: admin
       MYSQL_PASSWORD: secret
       MYSQL_ROOT_PASSWORD: secret
-      SERVICE_TAGS: dev
-      SERVICE_NAME: mysql
     networks:
       - laravel
-volumes:
-  shared:
