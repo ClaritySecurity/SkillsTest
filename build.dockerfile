@@ -1,4 +1,4 @@
-FROM php:8.1-fpm-alpine AS php
+FROM php:8.4-fpm-alpine AS php
 
 ENV UID=1001
 ENV GID=1001
@@ -37,8 +37,7 @@ RUN docker-php-ext-configure pcntl --enable-pcntl \
 CMD ["php-fpm", "-y", "/usr/local/etc/php-fpm.conf", "-R"]
 
 COPY --from=composer /usr/bin/composer /usr/bin/composer
-RUN /usr/bin/composer update
-RUN /usr/bin/composer install --optimize-autoloader
+RUN /usr/bin/composer install --optimize-autoloader --no-dev
 
 RUN mkdir -p /var/docker
 COPY --chown=laravel:laravel site/init.sh /var/docker
@@ -58,7 +57,7 @@ RUN chown -R laravel:laravel /var/www/html/storage
 RUN chmod g+s /var/www/html/storage/logs
 RUN touch /var/www/html/storage/logs/init.log
 
-FROM node:16.0-alpine AS node
+FROM node:22-alpine AS node
 
 FROM php
 
@@ -69,6 +68,7 @@ COPY --from=node /usr/local/include /usr/local/include
 COPY --from=node /usr/local/bin /usr/local/bin
 
 RUN npm install
+RUN npm install -g @anthropic-ai/claude-code
 
 EXPOSE 80
 EXPOSE 443
