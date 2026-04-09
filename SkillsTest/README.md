@@ -20,7 +20,7 @@ arrive at an acceptable solution are the main criteria we evaluate on.
 ## Setup
 
 1. Add your Anthropic API key to the `.env` file in the project root (next to `docker-compose.yml`)
-2. Run `docker-compose up --build`
+2. Run `docker compose up --build` (or `docker-compose up --build` on older Docker versions)
 3. Once the container is running, open a shell: `docker exec -it devskillstest /bin/sh`
 4. Verify: `php artisan --version` and `claude --version`
 
@@ -54,7 +54,7 @@ and extend the test suite to cover your changes.
 5. **Vue Component** -- Wire up the scaffolded Vue component to hit your API endpoint and render the breweries.
 
 6. **Tests** -- Update the test suite to cover the persistence layer you built. 
-7. 
+
 7. **Verify** -- Run the test suite:
    ```
    php artisan test
