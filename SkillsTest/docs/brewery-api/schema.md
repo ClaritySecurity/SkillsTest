@@ -4,7 +4,7 @@ Every endpoint returns brewery objects with these fields:
 
 | Field | Type | Nullable | Description |
 |-------|------|----------|-------------|
-| `id` | string | no | Unique identifier (slug format, e.g., `madtree-brewing-cincinnati`) |
+| `id` | string (uuid) | no | Unique identifier |
 | `name` | string | no | Brewery name |
 | `brewery_type` | string | no | Type of brewery (see types below) |
 | `address_1` | string | yes | Primary street address |
